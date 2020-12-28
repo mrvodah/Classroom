@@ -1,14 +1,14 @@
-package com.shashank.platform.classroomappui;
+package com.example.demo;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Announcements extends AppCompatActivity {
+public class MyProfile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_announcements);
+        setContentView(R.layout.activity_my_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
@@ -17,4 +17,6 @@ public class Announcements extends AppCompatActivity {
         finish();
         return true;
     }
+
+
 }

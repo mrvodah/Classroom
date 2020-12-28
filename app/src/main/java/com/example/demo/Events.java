@@ -1,14 +1,14 @@
-package com.shashank.platform.classroomappui;
+package com.example.demo;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Courses extends AppCompatActivity {
+public class Events extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_courses);
+        setContentView(R.layout.activity_events);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

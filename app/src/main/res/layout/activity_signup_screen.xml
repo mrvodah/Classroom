@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupScreen">
+    tools:context="com.example.demo.SignupScreen">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:textColor="#A7A4A4"
                 />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/fullname_til"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,9 +57,9 @@
                     android:text="Admin"
                     android:inputType="text"
                     android:textSize="16sp" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_til"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,9 +77,9 @@
                     android:text="admin@gmail.com"
                     android:inputType="textEmailAddress"
                     android:textSize="16sp" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_til"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,7 +99,16 @@
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:textSize="16sp" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_is_teacher"
+                android:text="Is Teacher"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/calibri"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/sign_up"

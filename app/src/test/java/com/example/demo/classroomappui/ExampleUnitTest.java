@@ -1,4 +1,4 @@
-package com.shashank.platform.classroomappui;
+package com.example.demo.classroomappui;
 
 import org.junit.Test;
 

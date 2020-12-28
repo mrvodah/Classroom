@@ -1,6 +1,6 @@
-package com.shashank.platform.classroomappui;
+package com.example.demo;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
