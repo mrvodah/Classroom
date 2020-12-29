@@ -50,7 +50,7 @@ public class SignupScreen extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(newEmail).exists())
-                    Toast.makeText(SignupScreen.this, "Email already register!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupScreen.this, "Email đã được đăng ký trước!", Toast.LENGTH_SHORT).show();
                 else {
                     User user = new User(
                             fullname.getText().toString(),
@@ -61,7 +61,7 @@ public class SignupScreen extends AppCompatActivity {
 
                     table_user.child(newEmail).setValue(user);
                     table_user.removeEventListener(this);
-                    Toast.makeText(SignupScreen.this, "Email register successfully!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupScreen.this, "Đăng ký Email thành công", Toast.LENGTH_SHORT).show();
                     finish();
                 }
 

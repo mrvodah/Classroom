@@ -185,7 +185,7 @@ public class Home extends AppCompatActivity
                 String timeInterval = String.valueOf(System.currentTimeMillis() / 1000);
                 courses.child(timeInterval).setValue(course);
                 list.child(timeInterval).setValue(course);
-                Toast.makeText(Home.this, "Course register successfully!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Home.this, "Đăng ký khóa học thành công!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -215,7 +215,7 @@ public class Home extends AppCompatActivity
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
-                            Toast.makeText(Home.this, "Uploaded !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Home.this, "Đã tải thành công!", Toast.LENGTH_SHORT).show();
                             imageFolder.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
@@ -312,8 +312,11 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_courses) {
-            Intent intent = new Intent(getApplicationContext(), Courses.class);
-            startActivity(intent);
+            if (!Common.currentUser.teacher) {
+                Intent intent = new Intent(getApplicationContext(), Courses.class);
+                intent.putExtra("buyCourse", true);
+                startActivity(intent);
+            }
         } else if (id == R.id.nav_events) {
             Intent intent = new Intent(getApplicationContext(), Events.class);
             startActivity(intent);

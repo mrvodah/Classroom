@@ -374,7 +374,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/calibri"
-                android:text="Categories"
+                android:text="Danh mục"
                 android:textAlignment="textStart"
                 android:textColor="#000000"
                 android:textSize="18sp"
@@ -385,6 +385,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@android:color/transparent"
                 app:contentPadding="16dp">
 
                 <LinearLayout
@@ -396,20 +397,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="4dp"
                         android:layout_weight="100">
 
                         <LinearLayout
+                            android:background="@android:color/holo_blue_light"
                             android:id="@+id/ln_english"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="100dp"
                             android:layout_weight="25"
                             android:gravity="center"
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:src="@drawable/ic_school_red_24dp"
                                 android:layout_marginBottom="8dp"/>
 
@@ -417,23 +419,25 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="English"
-                                android:textColor="#000000"
+                                android:textColor="@color/white"
                                 android:fontFamily="@font/calibri"
                                 />
 
                         </LinearLayout>
 
                         <LinearLayout
+                            android:layout_marginHorizontal="4dp"
+                            android:background="@android:color/holo_green_light"
                             android:id="@+id/ln_math"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="100dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:layout_weight="25">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:src="@drawable/ic_receipt_red_24dp"
                                 android:layout_marginBottom="8dp"/>
 
@@ -441,23 +445,24 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Math"
-                                android:textColor="#000000"
+                                android:textColor="@color/white"
                                 android:fontFamily="@font/calibri"
                                 />
 
                         </LinearLayout>
 
                         <LinearLayout
+                            android:background="@android:color/holo_orange_light"
                             android:id="@+id/ln_physical"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="100dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:layout_weight="25">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:src="@drawable/ic_public_red_24dp"
                                 android:layout_marginBottom="8dp"/>
 
@@ -465,30 +470,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Physical"
-                                android:textColor="#000000"
-                                android:fontFamily="@font/calibri"
-                                />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:layout_weight="25">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_nature_red_24dp"
-                                android:layout_marginBottom="8dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="KRS"
-                                android:textColor="#000000"
+                                android:textColor="@color/white"
                                 android:fontFamily="@font/calibri"
                                 />
 
@@ -503,38 +485,16 @@
                         android:layout_weight="100">
 
                         <LinearLayout
+                            android:background="@android:color/holo_red_light"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="25"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_local_activity_red_24dp"
-                                android:layout_marginBottom="8dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="SPP"
-                                android:textColor="#000000"
-                                android:fontFamily="@font/calibri"
-                                />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="100dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:layout_weight="25">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:src="@drawable/ic_history_red_24dp"
                                 android:layout_marginBottom="8dp"/>
 
@@ -542,22 +502,24 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="History"
-                                android:textColor="#000000"
+                                android:textColor="@color/white"
                                 android:fontFamily="@font/calibri"
                                 />
 
                         </LinearLayout>
 
                         <LinearLayout
+                            android:layout_marginHorizontal="4dp"
+                            android:background="@android:color/holo_purple"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="100dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:layout_weight="25">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:src="@drawable/ic_note_red_24dp"
                                 android:layout_marginBottom="8dp"/>
 
@@ -565,7 +527,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Library"
-                                android:textColor="#000000"
+                                android:textColor="@color/white"
                                 android:fontFamily="@font/calibri"
                                 />
 
@@ -573,15 +535,16 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:background="@android:color/holo_green_dark"
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="100dp"
                             android:orientation="vertical"
                             android:gravity="center"
                             android:layout_weight="25">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:src="@drawable/ic_domain_red_24dp"
                                 android:layout_marginBottom="8dp"/>
 
@@ -589,7 +552,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Event"
-                                android:textColor="#000000"
+                                android:textColor="@color/white"
                                 android:fontFamily="@font/calibri"
                                 />
 
@@ -617,7 +580,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
                     android:fontFamily="@font/calibri"
-                    android:text="Ongoing courses"
+                    android:text="Khóa học"
                     android:textAlignment="textStart"
                     android:textColor="#000000"
                     android:textSize="18sp"

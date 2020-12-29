@@ -13,14 +13,13 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".DetailScreen"
-            android:label="Detail" />
+            android:label="Chi tiết" />
         <activity
             android:name=".LessonScreen"
-            android:label="Lessons" />
+            android:label="Khóa học" />
         <activity
             android:name=".Settings"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label=""
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -38,14 +37,14 @@
         <activity
             android:name=".Courses"
             android:configChanges="orientation|screenSize"
-            android:label="Courses" />
+            android:label="Khóa học" />
         <activity
             android:name=".MyProfile"
             android:configChanges="orientation|screenSize"
-            android:label="My Profile" />
+            android:label="Thông tin" />
         <activity
             android:name=".Home"
-            android:label="@string/title_activity_home"
+            android:label="Trang chủ"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SignupScreen"

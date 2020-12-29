@@ -64,7 +64,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
 
                         if (user.getPassword().equals(password.getText().toString())) {
                             Common.currentUser = user;
-                            Toast.makeText(LoginScreen.this, "Login successfully!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginScreen.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
 
                             Intent intent = new Intent(getApplicationContext(), Home.class);
                             startActivity(intent);
@@ -72,10 +72,10 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                             table_user.removeEventListener(this);
 
                         } else {
-                            Toast.makeText(LoginScreen.this, "Login failed!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginScreen.this, "Đăng nhập thất bại!", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(LoginScreen.this, "User not exists", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginScreen.this, "Tài khoản không hợp lệ", Toast.LENGTH_SHORT).show();
                     }
                 }
 

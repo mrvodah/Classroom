@@ -136,7 +136,7 @@ public class LessonScreen extends AppCompatActivity {
                 );
 
                 lessons.push().setValue(lesson);
-                Toast.makeText(LessonScreen.this, "Course register successfully!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LessonScreen.this, "Đăng ký bài học thành công!", Toast.LENGTH_SHORT).show();
             }
         });
     }

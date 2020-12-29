@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.demo.bottomsheet.BuyCourseBottomSheet;
 import com.example.demo.common.Common;
 import com.example.demo.database.Course;
 import com.example.demo.interface1.OnClickListener;
@@ -19,6 +20,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import butterknife.BindView;
@@ -46,16 +48,19 @@ public class Courses extends AppCompatActivity {
         list = database.getReference("List");
         license = database.getReference("License").child(Common.getEmail(Common.currentUser.email));
 
-        loadCourses();
+        if (getIntent().hasExtra("buyCourse")) {
+            loadCourses(license.orderByKey());
+        } else {
+            loadCourses(list.orderByChild("type").equalTo(getIntent().getStringExtra("type")));
+        }
     }
 
-    private void loadCourses() {
+    private void loadCourses(Query query) {
         adapter = new FirebaseRecyclerAdapter<Course, CourseViewHolder>(
                 Course.class,
                 R.layout.item_course,
                 CourseViewHolder.class,
-                list.orderByChild("type").equalTo(getIntent().getStringExtra("type"))
-        ) {
+                query) {
             @Override
             protected void populateViewHolder(CourseViewHolder viewHolder, Course model, int position) {
                 viewHolder.name.setText(model.name);
@@ -74,25 +79,16 @@ public class Courses extends AppCompatActivity {
                                     intent.putExtra("email", Common.getEmail(model.email));
                                     startActivity(intent);
                                 } else {
-                                    new AlertDialog.Builder(Courses.this)
-                                            .setTitle("Attention!")
-                                            .setMessage("Do you want to buy this Course now?")
-                                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialogInterface, int i) {
-                                                    dialogInterface.dismiss();
-//                                                    license.child("email").setValue(model.email);
-                                                    license.setValue(true);
-                                                    Toast.makeText(Courses.this, "Buy Course successfully!", Toast.LENGTH_SHORT).show();
-                                                }
-                                            })
-                                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialogInterface, int i) {
-                                                    dialogInterface.dismiss();
-                                                }
-                                            })
-                                            .show();
+                                    BuyCourseBottomSheet buyCourseBottomSheet = BuyCourseBottomSheet.getInstance(model);
+                                    buyCourseBottomSheet.setListener(new OnClickListener() {
+                                        @Override
+                                        public void onClick(View view, int position, boolean isLongClick) {
+                                            buyCourseBottomSheet.dismiss();
+                                            license.setValue(model);
+                                            Toast.makeText(Courses.this, "Mua khóa học thành công!", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                    buyCourseBottomSheet.show(Courses.this.getSupportFragmentManager(), "tag");
                                 }
                             }
 

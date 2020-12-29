@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign up with your Email Address"
+                android:text="Đăng ký với địa chỉ Email"
                 android:fontFamily="@font/calibri"
                 android:textAlignment="center"
                 android:textSize="18sp"
@@ -53,8 +53,7 @@
                     android:drawableStart="@drawable/ic_person_gray_24dp"
                     android:drawablePadding="16dp"
                     android:fontFamily="@font/calibri"
-                    android:hint="Fullname"
-                    android:text="Admin"
+                    android:hint="Tên đẩy đù"
                     android:inputType="text"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -74,7 +73,6 @@
                     android:drawablePadding="16dp"
                     android:fontFamily="@font/calibri"
                     android:hint="Email"
-                    android:text="admin@gmail.com"
                     android:inputType="textEmailAddress"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -94,8 +92,7 @@
                     android:drawableStart="@drawable/ic_lock_gray_24dp"
                     android:drawablePadding="16dp"
                     android:fontFamily="@font/calibri"
-                    android:hint="Password"
-                    android:text="shashank"
+                    android:hint="@string/password"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:textSize="16sp" />
@@ -103,7 +100,7 @@
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/cb_is_teacher"
-                android:text="Is Teacher"
+                android:text="@string/is_teacher"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/calibri"
                 android:layout_gravity="center_horizontal"
@@ -119,7 +116,7 @@
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/red_rounded_solid"
                 android:fontFamily="@font/calibri"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
@@ -152,7 +149,7 @@
                         android:fontFamily="@font/calibri"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
-                        android:text="Already registered?"
+                        android:text="Đã cái tài khoản?"
                         android:textAlignment="textEnd"
                         android:textColor="#000000"
                         android:textSize="16sp"
@@ -164,17 +161,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="50"
                         android:fontFamily="@font/calibri"
+                        android:layout_marginStart="4dp"
                         android:paddingTop="16dp"
                         android:paddingBottom="16dp"
-                        android:text=" Sign in now"
+                        android:text="@string/sign_in"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
-
                 </LinearLayout>
-
-
 
             </LinearLayout>
 
